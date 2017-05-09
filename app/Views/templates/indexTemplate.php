@@ -16,7 +16,7 @@
 
 </head>
 
-<body id="pageLogin">
+<body id="pageLogin" class="row">
 
     <div class="text-center">
         <img src="img/logo.png" id="logo"> 

@@ -19,4 +19,4 @@ if($page[0] == 'admin'){
 }
 $controller = new $controller();
 
-$controller->$action();
+$controller->$action(); 

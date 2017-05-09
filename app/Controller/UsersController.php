@@ -12,7 +12,7 @@ class UsersController extends AppController{
     }
 
     public function index(){
-        $profil = $this->User->last();
+        $profil = $this->User->findUser($_SESSION["user"]);
         $this->render('users.index', compact('profil'));
     }
 

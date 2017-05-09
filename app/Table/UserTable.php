@@ -5,7 +5,16 @@ use Core\Table\Table;
 
 class UserTable extends Table{
 
-    protected $table = 'articles';
+    protected $table = 'users';
+
+    /**
+    * Récupère les données de l'utilisateur
+    * @return array
+    */
+    public function findUser(){
+        return $this->query("SELECT users.id, users.name, users.mail, users.rights
+            FROM users WHERE id = ?", array($_SESSION["user"]));
+    }
 
     /**
      * Récupère les derniers article
@@ -13,24 +22,23 @@ class UserTable extends Table{
      */
     public function last(){
         return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date, categories.titre as categorie
-            FROM articles
-            LEFT JOIN categories ON category_id = categories.id
-            ORDER BY articles.date DESC");
+            SELECT users.id, users.name, users.mail, users.rights
+            FROM users
+            ");
     }
 
     /**
-     * Récupère les derniers articles de la category demandée
+     * Récupère les derniers users de la category demandée
      * @param $category_id int
      * @return array
      */
     public function lastByCategory($category_id){
         return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date, categories.titre as categorie
-            FROM articles
+            SELECT users.id, users.titre, users.contenu, users.date, categories.titre as categorie
+            FROM users
             LEFT JOIN categories ON category_id = categories.id
-            WHERE articles.category_id = ?
-            ORDER BY articles.date DESC", [$category_id]);
+            WHERE users.category_id = ?
+            ORDER BY users.date DESC", [$category_id]);
     }
 
     /**
@@ -40,9 +48,9 @@ class UserTable extends Table{
      */
     public function findWithCategory($id){
         return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date, categories.titre as categorie
-            FROM articles
+            SELECT users.id, users.titre, users.contenu, users.date, categories.titre as categorie
+            FROM users
             LEFT JOIN categories ON category_id = categories.id
-            WHERE articles.id = ?", [$id], true);
+            WHERE users.id = ?", [$id], true);
     }
 }

@@ -17,7 +17,7 @@ class ConnectsController extends AppController {
             if($_SESSION["auth"] === "admin"){
                 header('Location: index.php?p=admin.posts.index');
             } elseif($_SESSION["auth"] === "user"){
-                header('Location: index.php?p=posts.index');
+                header('Location: index.php?p=users.index');
             } else{
                 $errors = true;
             }

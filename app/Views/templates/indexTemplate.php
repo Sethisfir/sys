@@ -16,18 +16,18 @@
 
 </head>
 
-<body>
-<div>
-    <img class="logo" src="img/logo.png" id="logo"> 
-</div>
-<div class="container">
+<body id="pageLogin">
 
-    <div class="starter-template" style="padding-top: 100px;">
-        <?= $content; ?>
+    <div class="text-center">
+        <img src="img/logo.png" id="logo"> 
     </div>
+    <div class="container">
 
-</div><!-- /.container -->
+        <div class="starter-template">
+            <?= $content; ?>
+        </div>
 
+    </div><!-- /.container -->
 
 </body>
 </html>

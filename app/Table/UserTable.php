@@ -13,7 +13,7 @@ class UserTable extends Table{
     */
     public function findUser(){
         return $this->query("SELECT users.id, users.name, users.mail, users.rights
-            FROM users WHERE id = ?", array($_SESSION["user"]));
+            FROM users WHERE id = ?", array($_SESSION["user"]), true);
     }
 
     /**

@@ -18,7 +18,7 @@
 
 <body>
 <div>
-   <img src="" id="logo" /> 
+    <img class="logo" src="img/logo.png" id="logo"> 
 </div>
 <div class="container">
 

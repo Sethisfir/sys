@@ -25,10 +25,9 @@ class DBAuth {
      */
     public function login($username, $password){
         $user = $this->db->prepare('SELECT * FROM users WHERE name = ?', [$username], null, true);
-        var_dump(sha1($password));
         if($user){
             if($user->password === sha1($password)){
-                $_SESSION['auth'] = $user->id;
+                $user->rights == 1 ? $_SESSION['auth'] = "admin" : $_SESSION['auth'] = "user";
                 return true;
             }
         }

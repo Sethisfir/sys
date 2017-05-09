@@ -6,7 +6,7 @@
 
 <form method="post">
 <div class="login-page">
-<h2 class="login-titre">Connexion</h2>
+<img class="logo" src="img/logo.png" width="200">
   <div class="form">
     <?= $form->input('username', 'Pseudo'); ?>
     <?= $form->input('password', 'Mot de passe', ['type' => 'password']); ?>

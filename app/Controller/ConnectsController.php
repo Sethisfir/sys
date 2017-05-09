@@ -6,7 +6,7 @@ use Core\Auth\DBAuth;
 use Core\HTML\BootstrapForm;
 use \App;
 
-class UsersController extends AppController {
+class ConnectsController extends AppController {
 
     public function login(){
         $errors = false;
@@ -23,7 +23,7 @@ class UsersController extends AppController {
             }
         }
         $form = new BootstrapForm($_POST);
-        $this->render('users.login', compact('form', 'errors'));
+        $this->render('connects.login', compact('form', 'errors'));
     }
 
 }

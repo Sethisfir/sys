@@ -30,7 +30,6 @@ class MysqlDatabase extends Database{
     }
 
     public function query($statement, $class_name = null, $one = false){
-        var_dump($_SESSION["auth"]);
         $req = $this->getPDO()->query($statement);
         if(
             strpos($statement, 'UPDATE') === 0 ||

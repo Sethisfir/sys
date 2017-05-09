@@ -6,7 +6,7 @@ App::load();
 if(isset($_GET['p'])){
     $page = $_GET['p'];
 }else{
-    $page = 'users.login';
+    $page = 'connects.login';
 }
 
 $page = explode('.', $page);

@@ -33,8 +33,7 @@ class AdminsController extends AppController{
 
     public function kick()
     {
-        $user = $this->User->query("SELECT users.id, users.name, users.mail, users.rights, users.isKick, users.isBan
-            FROM users WHERE id = ?", [$_POST['id']], true);
+        $user = $this->User->find($_POST['id']);
         if($user->isKick == false){
             $this->User->update($_POST['id'], ['isKick' => true]);
             header("Location: index.php?p=admin.admins.all");

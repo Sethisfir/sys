@@ -34,7 +34,7 @@ class UserTable extends Table{
      */
     public function last(){
         return $this->query("
-            SELECT users.id, users.name, users.mail, users.rights
+            SELECT users.id, users.name, users.mail, users.rights, users.isKick, users.isBan
             FROM users
             ");
     }

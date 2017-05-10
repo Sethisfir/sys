@@ -22,6 +22,7 @@
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php">Project name</a>
+            <a class="btn btn-info" href="index.php?p=admin.admins.all">Gestions des utilisateurs</a>
         </div>
     </div>
 </nav>

@@ -12,8 +12,12 @@ class AdminsController extends AppController{
         $this->loadModel('User');
     }
     public function all(){
-        $users = $this->User->allUsers();
-        $this->render('admin.users.show', compact('users'));
+        if($_SESSION['auth'] == 'admin'){
+            $users = $this->User->allUsers();
+            $this->render('admin.users.show', compact('users'));
+        }else{
+            $this->forbidden();
+        }
     }
 
     public function delete()

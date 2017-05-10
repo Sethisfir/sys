@@ -12,6 +12,7 @@
 	<?php foreach ($users as $key => $value): ?>
 	<tr>
 		<td><?= $value->id; ?></td>
+		<td><img src="<?=$value->src?>" width="50" height="50" alt="ProfilPicture"></td>
 		<td><?= $value->name; ?></td>
 		<td><?= $value->mail; ?></td>
 		<td><?= $value->rights; ?></td>

@@ -7,5 +7,3 @@
 	 		<p><?= $library->author?></p>
 	 		<p><?= $library->releaseDate?></p>
 	 	<?php }
-	
- 

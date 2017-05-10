@@ -11,11 +11,11 @@ class UserTable extends Table{
     * Récupère les données de l'utilisateur
     * @return array
     */
-    public function findUser(){
+    public function findUser($array, $bool){
         return $this->query("SELECT users.id, users.name, users.mail, users.rights, profilpictures.src
             FROM users 
             LEFT JOIN profilpictures ON users.id = profilpictures.users_id 
-            WHERE users.id = ?", array($_SESSION["user"]), true);
+            WHERE users.id = ?", array($array), $bool);
     }
 
     /**

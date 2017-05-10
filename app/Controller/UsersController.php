@@ -12,8 +12,10 @@ class UsersController extends AppController{
     }
 
     public function index(){
-        $profil = $this->User->findUser($_SESSION["user"]);
-        $this->render('users.index', compact('profil'));
+        $profil = $this->User->findUser();
+        $myLibrary = $this->User->getMusics();
+        $profil->src != null ? $src = $profil->src : $src = "http://www.snut.fr/wp-content/uploads/2015/06/image-de-profil-2.jpg";
+        $this->render('users.index', compact('profil', 'src', 'myLibrary'));
     }
 
     public function category(){

@@ -12,8 +12,20 @@ class UserTable extends Table{
     * @return array
     */
     public function findUser(){
-        return $this->query("SELECT users.id, users.name, users.mail, users.rights
-            FROM users WHERE id = ?", array($_SESSION["user"]), true);
+        return $this->query("SELECT users.id, users.name, users.mail, users.rights, profilpictures.src
+            FROM users 
+            LEFT JOIN profilpictures ON users.id = profilpictures.users_id 
+            WHERE users.id = ?", array($_SESSION["user"]), true);
+    }
+
+    /**
+    * Récupère les musique de l'utilisateur
+    * @return array
+    */
+    public function getMusics(){
+        return $this->query("SELECT * 
+            FROM musics 
+            WHERE musics.users_id = ?", array($_SESSION["user"]));
     }
 
     /**

@@ -18,7 +18,21 @@
 		<td>
 			<form action="index.php?p=admin.admins.delete" method="POST">
 				<input type="hidden" name="id" value="<?=$value->id?>">
-				<input class="btn btn-danger" type="submit" value="Bannir (définitif)">
+				<?php if ($value->isBan == false): ?>
+					<input class="btn btn-danger" type="submit" value="Bannir">
+				<?php else : ?>
+				<input class="btn btn-danger" type="submit" value="Débannir">
+				<?php endif ?>
+			</form>
+		</td>
+		<td>
+			<form action="index.php?p=admin.admins.kick" method="POST">
+				<input type="hidden" name="id" value="<?=$value->id?>">
+				<?php if ($value->isKick == false): ?>
+					<input class="btn btn-success" type="submit" value="Kicker">
+				<?php else : ?>
+				<input class="btn btn-success" type="submit" value="DéKicker">
+				<?php endif ?>
 			</form>
 		</td>
 	</tr>

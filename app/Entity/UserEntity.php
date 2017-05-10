@@ -14,5 +14,4 @@ class UserEntity extends Entity{
         $html .= '<p><a href="' . $this->getURL() . '">Voir la suite</a></p>';
         return $html;
     }
-
 }

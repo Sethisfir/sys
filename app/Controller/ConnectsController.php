@@ -15,7 +15,7 @@ class ConnectsController extends AppController {
             $auth = new DBAuth(App::getInstance()->getDb());
             $auth->login($_POST['username'], $_POST['password']);
             if($_SESSION["auth"] === "admin"){
-                header('Location: index.php?p=admin.posts.index');
+                header('Location: index.php?p=admin.admins.all');
             } elseif($_SESSION["auth"] === "user"){
                 header('Location: index.php?p=users.index');
             } else{

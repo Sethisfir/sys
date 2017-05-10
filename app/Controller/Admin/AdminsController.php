@@ -12,7 +12,7 @@ class AdminsController extends AppController{
         $this->loadModel('User');
     }
     public function all(){
-        $users = $this->User->last();
+        $users = $this->User->allUsers();
         $this->render('admin.users.show', compact('users'));
     }
 

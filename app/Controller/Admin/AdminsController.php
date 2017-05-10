@@ -18,7 +18,7 @@ class AdminsController extends AppController{
 
     public function delete()
     {
-        $user = $this->User->find($_POST['id']);
+        $user = $this->User->find($_POST['id'], false);
         if($user->isBan == false){
             $this->User->update($_POST['id'], ['isBan' => true]);
             $this->User->update($_POST['id'], ['isKick' => true]);
@@ -33,7 +33,7 @@ class AdminsController extends AppController{
 
     public function kick()
     {
-        $user = $this->User->find($_POST['id']);
+        $user = $this->User->find($_POST['id'], false);
         if($user->isKick == false){
             $this->User->update($_POST['id'], ['isKick' => true]);
             header("Location: index.php?p=admin.admins.all");

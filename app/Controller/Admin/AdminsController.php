@@ -12,9 +12,10 @@ class AdminsController extends AppController{
         $this->loadModel('User');
     }
     public function all(){
+        $_SESSION['auth'] == "admin" ? $isAdmin = "admin.admins.all" : $isAdmin = "users.index";
         if($_SESSION['auth'] == 'admin'){
             $users = $this->User->allUsers();
-            $this->render('admin.users.show', compact('users'));
+            $this->render('admin.users.show', compact('users', 'isAdmin'));
         }else{
             $this->forbidden();
         }

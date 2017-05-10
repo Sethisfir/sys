@@ -21,7 +21,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">Project name</a>
+            <a class="navbar-brand" href="index.php?p=<?= $isAdmin ?>">Project name</a>
             <?php if ($_SESSION['auth'] == 'admin'): ?>
                 <a class="btn btn-info" href="index.php?p=admin.admins.all">Gestions des utilisateurs</a>
             <?php endif ?>

@@ -12,6 +12,9 @@ class UsersController extends AppController{
     }
 
     public function index(){
+        if(!$_SESSION){
+            $this->notFound();
+        }
         $_SESSION['auth'] == "admin" ? $isAdmin = "admin.users.all" : $isAdmin = "users.index";
         $profil = $this->User->findUser($_SESSION["user"], true);
         $myLibrary = $this->User->getMusics();

@@ -12,6 +12,9 @@ class AdminsController extends AppController{
         $this->loadModel('User');
     }
     public function all(){
+        if(!$_SESSION){
+            $this->notFound();
+        }
         $_SESSION['auth'] == "admin" ? $isAdmin = "admin.admins.all" : $isAdmin = "users.index";
         if($_SESSION['auth'] == 'admin'){
             $users = $this->User->allUsers();

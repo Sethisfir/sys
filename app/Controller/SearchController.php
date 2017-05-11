@@ -14,6 +14,9 @@ class SearchController extends AppController {
     }
 
     public function index(){
+       if(!$_SESSION){
+            $this->notFound();
+        }
        $_SESSION['auth'] == "admin" ? $isAdmin = "admin.users.all" : $isAdmin = "users.index";
        $search = $this->Search->allMusics();
        $form = new BootstrapForm();

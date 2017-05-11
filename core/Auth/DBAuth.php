@@ -39,4 +39,20 @@ class DBAuth {
         return isset($_SESSION['auth']);
     }
 
+    public function authorizationBan($username)
+    {
+        $user = $this->db->prepare("SELECT * FROM users WHERE name = ? AND isBan = ?", [$username, 1]);
+        if($user){
+            return true;
+        }
+    }
+
+    public function authorizationKick($username)
+    {
+        $user = $this->db->prepare("SELECT * FROM users WHERE name = ? AND isKick = ?", [$username, 1]);
+        if($user){
+            return true;
+        }
+    }
+
 }

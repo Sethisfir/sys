@@ -1,73 +1,65 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
-  width: 360px;
+  width: 320px;
   margin: auto;
   text-align: center;
-}
-#pageLogin{
-  background-image:url("../img/fond.svg");
-  background-size:contain;
 
 }
+
+#pageLogin{
+  background-image:url("../img/fond.svg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
 #logo{
-  width: 20%;
+  width: 60%;
 }
 
 .login-titre{
   text-align: center;
   margin-bottom: 20px;
 }
+
 .form {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
+  max-width: 320px;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .btn {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #00C0A5;
+    width: 100%;
+    border: 0;
+    margin-top: 25px;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
 }
-.form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form .btn {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #00C0A5;
-  width: 100%;
-  border: 0;
-  margin-top: 25px;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
+
 .form .btn:hover,.form .btn:active,.form .btn:focus {
   background: #00C0A5;
-}
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.form .message a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-.form .register-form {
-  display: none;
 }
 
 .form .form-control:focus {
@@ -76,19 +68,3 @@
           box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 192, 165, 1);
 }
 
-@media (max-width:420px){
-  #pageLogin{
-    background-size:cover;
-    background-repeat: no-repeat;
-  }
-
-  #logo{
-    width: 70%;
-  }
-  .form {
-    padding:20px;
-    max-width: 320px;
-    margin-left: 0px;
-
-  }
-}

@@ -21,7 +21,7 @@
 <header>
     <img src="../img/fond.svg" id="background-header">
     <img class="logo" src="img/logo.png">
-    <h1>Share Your Sounds</h1>
+    <h1 class="text-center">Share Your Sounds</h1>
 </header>
 
     <div class="starter-template" style="padding-top: 100px;">

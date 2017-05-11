@@ -2,10 +2,12 @@
 	<thead>
 		<tr>
 			<th>ID</th>
+			<th>AVATAR</th>
 			<th>NAME</th>
 			<th>E-MAIL</th>
 			<th>NIVEAU DE DROIT</th>
-			<th>ACTIONS</th>
+			<th>BANNIR</th>
+			<th>KICK</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -15,7 +17,21 @@
 		<td><img src="<?=$value->src?>" width="50" height="50" alt="ProfilPicture"></td>
 		<td><?= $value->name; ?></td>
 		<td><?= $value->mail; ?></td>
-		<td><?= $value->rights; ?></td>
+		<td>
+			<form action="index.php?p=admin.admins.rights" method="POST" class="form-group">
+				<input type="hidden" name="id" value="<?=$value->id?>">
+				<select name="rights" class="form-control" require>
+				<?php for ($i=0; $i < 3; $i++) : ?>
+					<?php if ($i == $value->rights): ?>
+						<option selected value="<?=$value->rights?>"><?=$value->rights?></option>
+					<?php else : ?>
+						<option value="<?=$i?>"><?=$i?></option>
+					<?php endif ?>
+				<?php endfor?>
+				</select>
+				<input type="submit" value="Appliquer" class="btn">
+			</form>
+		</td>
 		<td>
 			<form action="index.php?p=admin.admins.delete" method="POST">
 				<input type="hidden" name="id" value="<?=$value->id?>">

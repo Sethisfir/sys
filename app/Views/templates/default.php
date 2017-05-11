@@ -18,16 +18,13 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">Project name</a>
-            <a class="btn btn-info" href="index.php?p=admin.admins.all">Gestions des utilisateurs</a>
-        </div>
-    </div>
-</nav>
 
 <div class="container">
+<header>
+    <img src="../img/fond.svg" id="background-header">
+    <img class="logo" src="img/logo.png">
+    <h1>Share Your Sounds</h1>
+</header>
 
     <div class="starter-template" style="padding-top: 100px;">
         <?= $content; ?>

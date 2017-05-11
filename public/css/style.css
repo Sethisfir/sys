@@ -8,6 +8,42 @@
   background-image: url("../img/fond.svg");
   background-size: contain; }
 
+body{
+  background-color: #314153; 
+}
+
+/* Header */
+header{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#background-header{
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  margin-top: -50%;
+  z-index: -1;
+  margin-left: -20px;
+}
+
+header img{
+  margin-top: -20px;
+  margin-left: 25%;
+  width: 48%;
+  height: 48%;
+}
+
+header h1{
+  color:  #0DC7A7;
+  font-size: 35px;
+  margin-top: -20px;
+  text-align: center;
+  text-shadow: white 2px 2px, white -2px 1px, white -2px -2px, white 2px -2px;
+  
+}
+
 #logo {
   width: 20%; }
 
@@ -83,3 +119,62 @@
     padding: 20px;
     max-width: 320px;
     margin-left: 0px; } }
+
+/* Accueil */
+
+#content-accueil{
+  width: 100%;
+}
+
+#profil{
+  width: 100%;
+  height: 100px;
+  margin-top: -50px;
+  background-color: #0DC7A7;
+  border-radius: 10px;
+}
+
+#profil img{
+  width: 23%;
+  height: 73%;
+  margin-top: 15px;
+  margin-left: 3px;
+  border-radius: 50px;
+}
+
+#profil h2{
+  color: white;
+  margin-top: -80px;
+  margin-left: 5px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#profil h3{
+  color: white;
+  margin-left: 5px;
+  font-size: 15px;
+  margin-top: -10px;
+  text-align: center;
+}
+
+#profil #img-contact{
+  margin-top: -150px;
+  margin-left: 215px;
+  width: 50%;
+  height: 50%;
+}
+
+#content-icone{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+}
+
+.liste-icone{
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}

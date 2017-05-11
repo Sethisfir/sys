@@ -2,7 +2,7 @@
 
 <div id="content-accueil">
   <div id="profil">
-    <?php echo "<img src=$src alt='profilePicture' width='150px' height='150px' />"; ?>
+    <?php echo "<img src=$src alt='profilePicture' width='150px' height='150px' id='img-profil'' />"; ?>
     <h2><?php echo "$profil->name"; ?></h2>
     <h3>"titre"- "artiste"</h3>
     <h3>Echangé le "dd/mm/aaaa"</h3>

@@ -57,4 +57,11 @@ class ConnectsController extends AppController {
         $form = new BootstrapForm($_POST);
         $this->render('connects.register', compact('form', 'errors'));
     }
+
+    public function disconnect()
+    {
+        session_destroy();
+        header("Location: index.php");
+        exit();
+    }
 }

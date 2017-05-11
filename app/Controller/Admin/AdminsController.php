@@ -12,9 +12,13 @@ class AdminsController extends AppController{
         $this->loadModel('User');
     }
     public function all(){
+        if(!$_SESSION){
+            $this->notFound();
+        }
+        $_SESSION['auth'] == "admin" ? $isAdmin = "admin.admins.all" : $isAdmin = "users.index";
         if($_SESSION['auth'] == 'admin'){
             $users = $this->User->allUsers();
-            $this->render('admin.users.show', compact('users'));
+            $this->render('admin.users.show', compact('users', 'isAdmin'));
         }else{
             $this->forbidden();
         }
@@ -44,6 +48,19 @@ class AdminsController extends AppController{
             exit();
         }elseif($user->isKick == true){
             $this->User->update($_POST['id'], ['isKick' => false]);
+            header("Location: index.php?p=admin.admins.all");
+            exit();
+        }
+    }
+
+    public function rights()
+    {
+        $user = $this->User->find($_POST['id'], false);
+        if (isset($_POST['rights'])) {
+            $this->User->update($_POST['id'], ['rights' => $_POST['rights']]);
+            header("Location: index.php?p=admin.admins.all");
+            exit();
+        }else{
             header("Location: index.php?p=admin.admins.all");
             exit();
         }

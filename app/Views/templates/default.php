@@ -17,6 +17,18 @@
 </head>
 
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php?p=users.index">Project name</a>
+            <?php if ($_SESSION['auth'] == 'admin'): ?>
+                <a class="btn btn-info" href="index.php?p=admin.admins.all">Gestions des utilisateurs</a>
+            <?php endif ?>
+            <a href="index.php?p=users.index" class="btn btn-info">Mon Profil</a>
+                <a class="btn btn-info" href="index.php?p=connects.disconnect">DECONNEXION PUTAIN</a>
+        </div>
+    </div>
+</nav>
 <div class="container">
 <header>
     <img src="../img/fond.svg" id="background-header">

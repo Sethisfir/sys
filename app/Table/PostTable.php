@@ -5,44 +5,54 @@ use Core\Table\Table;
 
 class PostTable extends Table{
 
-    protected $table = 'articles';
+    protected $table = 'musics';
 
     /**
      * Récupère les derniers article
      * @return array
      */
-    public function last(){
-        return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date, categories.titre as categorie
-            FROM articles
-            LEFT JOIN categories ON category_id = categories.id
-            ORDER BY articles.date DESC");
+    public function last($id){
+       return $this->query("SELECT users.name,
+                                    musics.title,
+                                    musics.author,
+                                    musics.releaseDate,
+                                    categories.type,
+                                    process.type as process
+                            FROM musics, users, categories, process 
+                            WHERE musics.users_id = $id
+                            AND categories.id = musics.categories_id
+                            AND process.id = musics.process_id ORDER BY musics.id DESC LIMIT 4");
     }
 
     /**
-     * Récupère les derniers articles de la category demandée
-     * @param $category_id int
+     * Récupère tous les articles
      * @return array
      */
-    public function lastByCategory($category_id){
-        return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date, categories.titre as categorie
-            FROM articles
-            LEFT JOIN categories ON category_id = categories.id
-            WHERE articles.category_id = ?
-            ORDER BY articles.date DESC", [$category_id]);
+    public function allMySong($id){
+       return $this->query("SELECT users.name,
+                                    musics.title,
+                                    musics.author,
+                                    musics.releaseDate,
+                                    categories.type,
+                                    process.type as process
+                            FROM musics, users, categories, process 
+                            WHERE musics.users_id = $id
+                            AND musics.users_id = users.id
+                            AND categories.id = musics.categories_id
+                            AND process.id = musics.process_id ORDER BY musics.id DESC");
     }
 
     /**
-     * Récupère un article en liant la catégorie associée
-     * @param $id int
-     * @return \App\Entity\PostEntity
-     */
-    public function findWithCategory($id){
-        return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date, categories.titre as categorie
-            FROM articles
-            LEFT JOIN categories ON category_id = categories.id
-            WHERE articles.id = ?", [$id], true);
+    *   Insert une nouvelle musique
+    *   @return bool
+    */
+    public function addSong($title, $author, $releaseDate, $users_id, $categories_id, $process_id){
+        return $this->query("INSERT INTO musics 
+                            SET musics.title=?,
+                                musics.author=?,
+                                musics.releaseDate=?,
+                                musics.users_id=?,
+                                musics.categories_id=?,
+                                musics.process_id=?", [$title, $author, $releaseDate, $users_id, $categories_id, $process_id]);
     }
 }

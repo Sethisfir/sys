@@ -55,4 +55,18 @@ class DBAuth {
         }
     }
 
+    public function register($username, $password, $password2, $mail){
+        $user = $this->db->prepare('SELECT * FROM users WHERE name = ? OR mail = ?', [$username, $mail], null, true);
+        if(!$user){
+            if($password === $password2){
+                $password = sha1($password);
+                $this->db->prepare("INSERT INTO users
+                                    SET name = ?, password = ?, mail = ?",
+                                    [$username, $password, $mail]);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

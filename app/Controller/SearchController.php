@@ -22,6 +22,4 @@ class SearchController extends AppController {
        $form = new BootstrapForm();
        $this->render('search.index', compact('search', 'isAdmin', 'form'));
     }
-
-    
 }

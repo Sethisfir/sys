@@ -36,4 +36,21 @@ class ConnectsController extends AppController {
         $form = new BootstrapForm($_POST);
         $this->render('connects.login', compact('form', 'errors'));
     }
+
+    public function register()
+    {
+        $errors = false;
+        $this->template = "indexTemplate";
+        if(!empty($_POST)){
+            $auth = new DBAuth(App::getInstance()->getDb());
+            if($auth->register($_POST['username'], $_POST['password'], $_POST['password2'], $_POST['mail'])){
+               header("Location: index.php");
+               exit();
+            }else{
+                $errors = true;
+            }
+        }
+        $form = new BootstrapForm($_POST);
+        $this->render('connects.register', compact('form', 'errors'));
+    }
 }

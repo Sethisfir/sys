@@ -32,7 +32,7 @@ class UserTable extends Table{
      * Récupère les derniers article
      * @return array
      */
-    public function last(){
+    public function allUsers(){
         return $this->query("
             SELECT users.id, users.name, users.mail, users.rights, profilpictures.src, users.isBan, users.isKick
             FROM users 

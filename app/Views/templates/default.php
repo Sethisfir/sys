@@ -17,8 +17,6 @@
 </head>
 
 <body>
-
-
 <div class="container">
 <header>
     <img src="../img/fond.svg" id="background-header">

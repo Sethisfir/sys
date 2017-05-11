@@ -13,12 +13,12 @@
   </div>
   <div id="content-icone">
     <div class="liste-icone">
-      <div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 5.svg" alt="" width="90%"></div>
-      <div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 3.svg" alt="" width="90%"></div>
+      <a href="#"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 5.svg" alt="" width="90%"></div></a>
+      <a href="#"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 3.svg" alt="" width="90%"></div></a>
     </div>
     <div class="liste-icone">
-      <div class="col-xs-offset-1 col-xs-6 icones"><img src="img/Fichier 2.svg" alt="" width="90%"></div>
-      <div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 1.svg" alt="" width="90%"></div>
+      <a href="#"><div class="col-xs-offset-1 col-xs-6 icones"><img src="img/Fichier 2.svg" alt="" width="90%"></div></a>
+      <a href="#"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 1.svg" alt="" width="90%"></div></a>
     </div>
   </div>
 </div>

@@ -63,6 +63,10 @@ class DBAuth {
                 $this->db->prepare("INSERT INTO users
                                     SET name = ?, password = ?, mail = ?",
                                     [$username, $password, $mail]);
+                $id = $this->db->lastInsertId();
+                $this->db->prepare("INSERT INTO profilpictures
+                                    SET src = ?, users_id = ?",
+                                    ['http://www.snut.fr/wp-content/uploads/2015/06/image-de-profil-2.jpg', $id]);
                 return true;
             }
         }

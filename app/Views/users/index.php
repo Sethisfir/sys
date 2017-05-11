@@ -1,13 +1,14 @@
 <div id="content-accueil">
-<<<<<<< HEAD
   <div id="profil" class="row">
     <?php echo "<img src=$src alt='profilePicture' id='img-profil' class='img-circle' />"; ?>
     <h2><?=$profil->name?></h2>
+    <div id="artiste-head">
     <?php foreach ($myLibrary as $key => $value): ?>
       <h3><?= $value->title?>- <?= $value->author?></h3>
       <h3>Echangé le <?= $value->releaseDate?></h3>
       <h3>Sur "support" avec "user".</h3>
-    <?php endforeach ?>  
+    <?php endforeach ?>
+    </div>  
   </div>
   <div id="content-icone">
     <div class="liste-icone">

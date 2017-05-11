@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" class="form">
 	 <?= $form->input("musicName", "Rechercher");?>
 	 <?= $form->submit();?>
 </form>	 

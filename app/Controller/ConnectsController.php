@@ -43,9 +43,13 @@ class ConnectsController extends AppController {
         $this->template = "indexTemplate";
         if(!empty($_POST)){
             $auth = new DBAuth(App::getInstance()->getDb());
-            if($auth->register($_POST['username'], $_POST['password'], $_POST['password2'], $_POST['mail'])){
-               header("Location: index.php");
-               exit();
+            if (isset($_POST['username'], $_POST['password'], $_POST['password2'], $_POST['mail']) && $_POST['password'] != '' && $_POST['mail'] != '') {
+                 if($auth->register($_POST['username'], $_POST['password'], $_POST['password2'], $_POST['mail'])){
+                   header("Location: index.php");
+                   exit();
+                }else{
+                    $errors = true;
+                }
             }else{
                 $errors = true;
             }

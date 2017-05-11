@@ -7,5 +7,6 @@
 	 		<p><?= $library->author?></p>
 	 		<p><?= $library->releaseDate?></p>
 	 	<?php } ?>
-
+		
+		<h1><a href="index.php?p=posts.index">Petit + </a></h1>
 	 	<h1><a href="index.php?p=search.index">Petite loupe</a></h1>

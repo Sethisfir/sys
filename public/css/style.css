@@ -11,9 +11,6 @@
 body{
   background-color: #314153; 
 }
-.container{
-  padding: 0 !important;
-}
 
 /* Header */
 header{
@@ -34,17 +31,17 @@ header{
 header img{
   margin-top: -20px;
   margin-left: 25%;
-  width: 45%;
-  height: 45%;
+  width: 48%;
+  height: 48%;
 }
 
 header h1{
-  color:  white;
-  font-weight: bold;
+  color:  #0DC7A7;
   font-size: 35px;
   margin-top: -20px;
   text-align: center;
-   
+  text-shadow: white 2px 2px, white -2px 1px, white -2px -2px, white 2px -2px;
+  
 }
 
 #logo {
@@ -134,16 +131,15 @@ header h1{
   height: 100px;
   margin-top: -50px;
   background-color: #0DC7A7;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
-#profil #img-profil{
+#profil img{
   width: 23%;
   height: 73%;
   margin-top: 15px;
   margin-left: 3px;
   border-radius: 50px;
-  border: 2px solid white;
 }
 
 #profil h2{
@@ -162,10 +158,11 @@ header h1{
   text-align: center;
 }
 
-#img-contact{
-  width: 20%;
-  height: 20%;
-  position: absolute;
+#profil #img-contact{
+  margin-top: -150px;
+  margin-left: 215px;
+  width: 50%;
+  height: 50%;
 }
 
 #content-icone{

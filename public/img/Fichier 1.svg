@@ -1,1 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294 294"><defs><style>.cls-1{fill:#00c0a5;}.cls-2{fill:#fff;}</style></defs><title>Fichier 1</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><rect class="cls-1" width="294" height="294" rx="39" ry="39"/><g id="Loupe"><path class="cls-2" d="M76.76,69.78a69.91,69.91,0,0,0,88,107.77l52.21,52.21L236.71,210l-52.19-52.23a69.92,69.92,0,0,0-107.77-88Zm79.12,79.12a42,42,0,1,1-.07-59.32A42,42,0,0,1,155.87,148.89Z"/></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 200 200"
+   id="svg4873"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Fichier 1.svg"
+   width="200"
+   height="200">
+  <metadata
+     id="metadata4890">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Fichier 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="836"
+     id="namedview4888"
+     showgrid="false"
+     inkscape:zoom="2.2704381"
+     inkscape:cx="169.77736"
+     inkscape:cy="136.94615"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4873" />
+  <defs
+     id="defs4875">
+    <style
+       id="style4877">.cls-1{fill:#00c0a5;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title4879">Fichier 1</title>
+  <g
+     id="g6886"
+     style="fill:#ffffff"
+     transform="matrix(0.79667452,0,0,0.7562783,-27.180579,-22.008665)">
+    <path
+       id="path4892"
+       d="M 126.1875,45.148438 A 76.857414,77.518082 0 0 0 49.330078,122.66797 76.857414,77.518082 0 0 0 126.1875,200.18555 76.857414,77.518082 0 0 0 203.04492,122.66797 76.857414,77.518082 0 0 0 126.1875,45.148438 Z m 0.2207,30.390624 A 47.127468,47.127468 0 0 1 173.53516,122.66797 47.127468,47.127468 0 0 1 126.4082,169.79492 47.127468,47.127468 0 0 1 79.279297,122.66797 47.127468,47.127468 0 0 1 126.4082,75.539062 Z"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <rect
+       transform="matrix(0.67374473,0.73896417,-0.71975065,0.69423267,0,0)"
+       y="-25.025211"
+       x="225.0285"
+       height="29.497314"
+       width="150.98616"
+       id="rect4900"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.90960187;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

@@ -4,6 +4,11 @@
   margin: auto;
   text-align: center; }
 
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/font/LemonMilk.otf");
+}
+
 #pageLogin {
   background-image: url("../img/fond.svg");
   background-size: contain; }
@@ -23,12 +28,12 @@ header{
 }
 
 #background-header{
-  width: 100%;
+  width: 110%;
   height: 500px;
   position: fixed;
   margin-top: -50%;
-  z-index: -1;
   margin-left: -20px;
+  z-index: -1;
 }
 
 header img{
@@ -40,8 +45,9 @@ header img{
 
 header h1{
   color:  white;
+  font-family: "LemonMilk";
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
   margin-top: -20px;
   text-align: center;
    
@@ -131,53 +137,67 @@ header h1{
 
 #profil{
   width: 100%;
-  height: 100px;
+  height: 120px;
   margin-top: -50px;
   background-color: #0DC7A7;
   border-radius: 3px;
 }
 
-#profil #img-profil{
-  width: 23%;
-  height: 73%;
-  margin-top: 15px;
-  margin-left: 3px;
-  border-radius: 50px;
-  border: 2px solid white;
+#img-profil{
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: 150px;
+  left: 5px;
 }
 
 #profil h2{
   color: white;
   margin-top: -80px;
   margin-left: 5px;
+  padding-top: 10px;
   text-align: center;
   font-size: 25px;
 }
 
-#profil h3{
+#artiste-head{
   color: white;
-  margin-left: 5px;
+  margin-top: 25px;
+  margin-left: 18px;
+}
+
+#artiste-head h3{
   font-size: 15px;
-  margin-top: -10px;
-  text-align: center;
+  margin-top: -5px;
 }
 
 #img-contact{
-  width: 20%;
-  height: 20%;
+  width: 18%;
+  height: 18%;
   position: absolute;
+  top: 210px;
+  right: 15px;
 }
 
 #content-icone{
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   
+}
+
+.icones{
+  background-color: #0DC7A7;
+  width: 140px;
+  height: 140px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.icones img{
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
 .liste-icone{
   width: 100%;
-  display: flex;
   margin-top: 10px;
 }

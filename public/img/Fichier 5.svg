@@ -1,1 +1,124 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 292"><defs><style>.cls-1{fill:#00c0a5;}.cls-2{fill:#fff;}</style></defs><title>Fichier 5</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><rect class="cls-1" width="292" height="292" rx="39" ry="39"/><g id="Menu"><rect class="cls-2" x="83.46" y="61.41" width="164.04" height="21.87"/><rect class="cls-2" x="83.46" y="125.2" width="164.04" height="21.87"/><rect class="cls-2" x="83.46" y="188.99" width="164.04" height="21.87"/></g><g id="Menu-2" data-name="Menu"><rect class="cls-2" x="45" y="61.41" width="23.43" height="21.87"/><rect class="cls-2" x="45" y="125.2" width="23.43" height="21.87"/><rect class="cls-2" x="45" y="188.99" width="23.43" height="21.87"/></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 200 200"
+   id="svg4422"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Fichier 5.svg"
+   width="200"
+   height="200">
+  <metadata
+     id="metadata4450">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Fichier 5</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="836"
+     id="namedview4448"
+     showgrid="false"
+     inkscape:zoom="3.2328766"
+     inkscape:cx="164.39227"
+     inkscape:cy="108.95405"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4422"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs4424">
+    <style
+       id="style4426">.cls-1{fill:#00c0a5;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title4428">Fichier 5</title>
+  <g
+     id="Calque_2"
+     data-name="Calque 2"
+     transform="matrix(0.86252353,0,0,1.140742,-22.61452,-58.695274)">
+    <g
+       id="Calque_1-2"
+       data-name="Calque 1">
+      <g
+         id="Menu">
+        <rect
+           class="cls-2"
+           x="79.085526"
+           y="64.034683"
+           width="164.03999"
+           height="21.870001"
+           id="rect4435"
+           style="fill:#ffffff" />
+        <rect
+           class="cls-2"
+           x="79.085526"
+           y="127.82468"
+           width="164.03999"
+           height="21.870001"
+           id="rect4437"
+           style="fill:#ffffff" />
+        <rect
+           class="cls-2"
+           x="79.085526"
+           y="191.61469"
+           width="164.03999"
+           height="21.870001"
+           id="rect4439"
+           style="fill:#ffffff" />
+      </g>
+      <g
+         id="Menu-2"
+         data-name="Menu">
+        <rect
+           class="cls-2"
+           x="40.625526"
+           y="64.034683"
+           width="23.43"
+           height="21.870001"
+           id="rect4442"
+           style="fill:#ffffff" />
+        <rect
+           class="cls-2"
+           x="40.625526"
+           y="127.82468"
+           width="23.43"
+           height="21.870001"
+           id="rect4444"
+           style="fill:#ffffff" />
+        <rect
+           class="cls-2"
+           x="40.625526"
+           y="191.61469"
+           width="23.43"
+           height="21.870001"
+           id="rect4446"
+           style="fill:#ffffff" />
+      </g>
+    </g>
+  </g>
+</svg>

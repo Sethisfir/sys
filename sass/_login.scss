@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-.login-page {
-  width: 320px;
+.page {
+  width: 100%;
   margin: auto;
   text-align: center;
 
@@ -41,21 +41,23 @@
     box-sizing: border-box;
     font-size: 14px;
   }
-  .btn {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #00C0A5;
-    width: 100%;
-    border: 0;
-    margin-top: 25px;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-  }
+}
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #00C0A5;
+  width: 100%;
+  border: 0;
+  margin-top: 25px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
 }
 
 .form .btn:hover,.form .btn:active,.form .btn:focus {

@@ -4,7 +4,7 @@
     </div>
 <?php endif;?>
 <form method="post">
-<div class="login-page">
+<div class="page">
   <div class="form">
 <?=$form->input('username', 'Pseudo');?>
     <?=$form->input('password', 'Mot de passe', ['type' => 'password']);?>

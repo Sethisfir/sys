@@ -3,11 +3,9 @@
     <?php echo "<img src=$src alt='profilePicture' id='img-profil' class='img-circle' />"; ?>
     <h2><?=$profil->name?></h2>
     <div id="artiste-head" class="col-xs-7">
-    <?php foreach ($myLibrary as $key => $value): ?>
-      <h3><?= $value->title?>- <?= $value->author?></h3>
-      <h3>Echangé le <?= $value->releaseDate?></h3>
+      <h3><?= $myLibrary[0]->title?>- <?= $myLibrary[0]->author?></h3>
+      <h3>Echangé le <?= $myLibrary[0]->releaseDate?></h3>
       <h3>Sur "support" avec "user".</h3>
-    <?php endforeach ?>
     </div> 
     <img src="/img/Fichier 7.svg" id="img-contact" class="col-xs-3"> 
   </div>

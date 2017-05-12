@@ -1,14 +1,22 @@
-<form method="post" class="form">
-	<div class="form-group">
-		<label for="search">Rechercher</label>
-	 	<input type="search" name="search" id="search"  class="form-control"/>
-	 	<button type="submit" class="form-control">Rechercher</button>
-	</div> 
-</form>	 
 
 <div id="searchContainer" style="color: #00FF00">
 </div>
-<?php
-	foreach ($search as $search) : ?>
-		<p style='color:white'>Alors moi c'est "<?=$search->name ?>" et j't'"<?= $search->process ?>" "<?= $search->title ?>" de "<?= $search->author ?>" sorti le "<?= $search->releaseDate ?>" en format "<?= $search->type ?>".</p>
-	<?php endforeach ?>
+
+<div id="formSearch">
+	<form method="post" class="form">
+	 	<?= $form->input("musicName", "Rechercher");?>
+	 	<?= $form->submit();?>	 
+	<h2 class="text-center">Derniers ajouts</h2>
+	<?php
+		foreach ($search as $search) : ?>
+			<p>
+				<strong>Nom : </strong><?= $search->name ?><br>
+				<strong>Type : </strong><?= $search->process ?><br>
+				<strong>Titre : </strong><?= $search->title ?><br>
+				<strong>Artiste : </strong><?= $search->author ?><br>
+				<strong>Sorti le : </strong><?= $search->releaseDate ?><br>
+				<strong>Format : </strong><?= $search->type ?>
+			</p>
+		<?php endforeach ?>
+	</form>
+</div>

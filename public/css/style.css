@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-.login-page {
-  width: 320px;
+.page {
+  width: 100%;
   margin: auto;
   text-align: center; }
 
@@ -35,20 +35,22 @@
     padding: 15px;
     box-sizing: border-box;
     font-size: 14px; }
-  .form .btn {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #00C0A5;
-    width: 100%;
-    border: 0;
-    margin-top: 25px;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer; }
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #00C0A5;
+  width: 100%;
+  border: 0;
+  margin-top: 25px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer; }
 
 .form .btn:hover, .form .btn:active, .form .btn:focus {
   background: #00C0A5; }
@@ -153,3 +155,83 @@ header {
 .liste-icone {
   width: 100%;
   margin-top: 10px; }
+
+/*//////////////////////PAGE AJOUT/////////////////////////////*/
+.formShare {
+  max-width: 100%;
+  background-color: #0DC7A7;
+  padding: 20px;
+  margin-top: -20%; }
+
+.format [type="radio"]:not(:checked) + .iconeCassette,
+.format [type="radio"]:checked + .iconeCassette {
+  content: url(../img/cass.png);
+  position: relative;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom: 5%; }
+.format [type="radio"]:not(:checked) + .iconeCd,
+.format [type="radio"]:checked + .iconeCd {
+  content: url(../img/cd.png);
+  position: relative;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom: 5%; }
+.format [type="radio"]:not(:checked) + .iconeVinyle,
+.format [type="radio"]:checked + .iconeVinyle {
+  content: url(../img/vinyle.png);
+  position: relative;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom: 5%; }
+.format [type="radio"]:not(:checked),
+.format [type="radio"]:checked {
+  position: absolute;
+  left: -9999px; }
+.format [type="radio"]:not(:checked) + label:after {
+  opacity: 1; }
+.format [type="checkbox"]:checked + label:after {
+  opacity: 0.2; }
+
+.radioEchange {
+  position: relative; }
+
+.radioEchange input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.radioEchange input[type="radio"] + label {
+  padding: 4px 0 0 24px; }
+
+.radioEchange input[type="radio"] + label:before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent url(../img/sprite.svg) 0 -30px no-repeat; }
+
+.radioEchange input[type="radio"]:checked + label:before {
+  background-position: -30px -30px; }
+
+.icone-choix {
+  width: 70%; }
+
+.btnEnvoi {
+  text-transform: uppercase;
+  background: #ffffff;
+  width: 100%;
+  border: 0;
+  margin-top: 25px;
+  padding: 15px;
+  color: #00C0A5;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer; }
+
+/*//////////////////////PAGE RECHERCHE/////////////////////////////*/
+#formSearch {
+  margin-top: -25%; }
+  #formSearch h2 {
+    color: #00C0A5; }

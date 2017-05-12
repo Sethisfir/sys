@@ -1,5 +1,5 @@
 <div class="row">
-    <form methode="POST">
+    <form method="POST">
         <?= $form->input("title", "titre"); ?>
         <?= $form->input("author", "artiste"); ?>
         <div>;

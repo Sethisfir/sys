@@ -1,5 +1,5 @@
 <div class="row">
-    <form methode="POST">
+    <form method="POST">
         <?= $form->input("title", "titre"); ?>
         <?= $form->input("author", "artiste"); ?>
         <div>;
@@ -10,7 +10,7 @@
             <p>
                 <label>Cd</label>
                 <input type='radio' name='type' value='2' />
-            </p>
+            </p>it 
             <p>
                 <label>Vinyl</label>
                 <input type='radio' name='type' value='3' />

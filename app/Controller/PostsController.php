@@ -16,9 +16,8 @@ class PostsController extends AppController{
 
     public function index(){
         $_SESSION['auth'] == "admin" ? $isAdmin = "admin.users.all" : $isAdmin = "users.index";
-        $posts = $this->Post->allMySong($_SESSION["user"]);
         $form = new BootstrapForm();
-        $this->render('posts.index', compact('posts', 'form', 'isAdmin'));
+        $this->render('posts.index', compact('form', 'isAdmin'));
     }
 
     public function category(){

@@ -47,6 +47,7 @@
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
+  font-weight: 700;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer; }
@@ -228,3 +229,9 @@ header {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer; }
+
+/*//////////////////////PAGE RECHERCHE/////////////////////////////*/
+#formSearch {
+  margin-top: -25%; }
+  #formSearch h2 {
+    color: #00C0A5; }

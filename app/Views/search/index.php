@@ -6,7 +6,8 @@
 	</div> 
 </form>	 
 
+<div id="searchContainer">
 <?php
-	foreach ($search as $search) {
-		echo "<p style='color:white'>Alors moi c'est ".$search->name." et j't'".$search->process." ".$search->title." de ".$search->author." sorti le ".$search->releaseDate." en format ".$search->type.".</p>";
-	}
+	foreach ($search as $search) : ?>
+		<p style='color:white'>Alors moi c'est "<?=$search->name ?>" et j't'"<?= $search->process ?>" "<?= $search->title ?>" de "<?= $search->author ?>" sorti le "<?= $search->releaseDate ?>" en format "<?= $search->type ?>".</p>
+	<?php endforeach ?>

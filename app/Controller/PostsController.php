@@ -15,7 +15,12 @@ class PostsController extends AppController{
 
     public function index(){
         $_SESSION['auth'] == "admin" ? $isAdmin = "admin.users.all" : $isAdmin = "users.index";
-       $pushSongs = $this->Post->addSong($_POST["title"], $_POST["author"], $_POST["releaseDate"], $_POST["user"], $_POST["type"], $_POST["process"]);
+        if (isset($_POST['title'])){
+            var_dump($_POST);
+            var_dump("test");
+            $pushSongs = $this->Post->addSong($_POST["title"], $_POST["author"], $_POST["releaseDate"], $_POST["user"], $_POST["type"], $_POST["process"]);
+        }
+        var_dump("plouc");
         $posts = $this->Post->allMySong($_SESSION["user"]);
         $form = new BootstrapForm();
         $this->render('posts.index', compact('form', 'isAdmin'));

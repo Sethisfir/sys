@@ -4,8 +4,8 @@
 
 <div id="formSearch">
 	<form method="post" class="form">
-	 	<?= $form->input("musicName", "Rechercher");?>
-	 	<?= $form->submit();?>	 
+		<label>Rechercher</label>
+	 	<input type="text" name="search" id="search" />	 
 	<h2 class="text-center">Derniers ajouts</h2>
 	<?php
 		foreach ($search as $search) : ?>

@@ -1,46 +1,37 @@
-<div class="row">
-    <form methode="POST">
-        <?= $form->input("title", "titre"); ?>
-        <?= $form->input("author", "artiste"); ?>
-        <div>;
-            <p>
-                <label>Cassette</label>
-                <input type='radio' name='type' value='1' />
-            </p>
-            <p>
-                <label>Cd</label>
-                <input type='radio' name='type' value='2' />
-            </p>
-            <p>
-                <label>Vinyl</label>
-                <input type='radio' name='type' value='3' />
-            </p>
+<div class="page">
+    <form methode="POST" class="formShare">
+        <?= $form->input("title", "Titre"); ?>
+        <?= $form->input("author", "Artiste"); ?>
+        <!--Format disponible-->
+        <div class="form-group format">
+            <!--Faux label pour permettre l'affichage des suivants...-->
+            <label></label>
+            <input type='radio' name='type' />
+            <label for="cassette" class="iconeCassette"></label>
+            <input type='radio' name='type' value='1' id="cassette" />
+            <label for="cd" class="iconeCd"></label>
+            <input type='radio' name='type' value='2' id="cd" />
+            <label for="vinyle" class="iconeVinyle"></label>
+            <input type='radio' name='type' value='3' id="vinyle"/>
         </div>
-        <div>
-            <label>Echange</label>
-            <input type='radio' name='process' value='1' />
-            <label>Don</label>
-            <input type='radio' name='process' value='2' />
-            <label>Partager</label>
-            <input type='radio' name='process' value='3' />
+        <!--Type échange-->
+            <div class="radioEchange">
+                <label for="echange">Echange</label>
+                <input type='radio' name='process' value='1' id="echange" />
+            </div>
+            <div class="radioEchange">
+                <label for=" don">Don</label>
+                <input type='radio' name='process' value='2' id="don" />
+            </div>
+            <div class="radioEchange">
+                <label for="partage">Partager</label>
+                <input type='radio' name='process' value='3' id="partage" />
+            </div>
+
+        <!--Envoi-->
+        <div class="form-group">
+            <input type='hidden' value='<?= $_SESSION['user'] ?>' name='user' />
+            <button type="submit" class="btnEnvoi">Envoyer</button>
         </div>
-        <input type='hidden' value='<?= $_SESSION['user'] ?>' name='user' />
-        <button type="submit">Envoyer</button>
     </form>
-    
-    <div class="col-sm-8">
-        <?php foreach ($posts as $post): ?>
-
-            <h2><a><?= $post->title; ?></a></h2>
-
-            <p><em><?= $post->author; ?></em></p>
-
-            <p><?= $post->releaseDate; ?></p>
-
-            <p><?= $post->type; ?></p>
-
-        <?php endforeach; ?>
-
-    </div>
-
 </div>

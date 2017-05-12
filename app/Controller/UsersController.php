@@ -31,6 +31,14 @@ class UsersController extends AppController{
         $this->render('users.request', compact('musicsList'));
     }
 
+    public function musics()
+    {
+        if(!$_SESSION){
+          $this->notFound();
+        }
+        $this->render('users.musics');
+    }
+
     public function deal()
     {
       if (isset($_POST['id'])){

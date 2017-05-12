@@ -15,7 +15,7 @@
       <a href="index.php?p=posts.index"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 3.svg" alt="" width="90%"></div></a>
     </div>
     <div class="liste-icone">
-      <a href="index.php?p=users.request"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 2.svg" alt="" width="90%"></div></a>
+      <a href="index.php?p=users.musics"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 2.svg" alt="" width="90%"></div></a>
       <a href="index.php?p=search.index"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 1.svg" alt="" width="90%"></div></a>
     </div>
   </div>

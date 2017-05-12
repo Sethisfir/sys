@@ -22,6 +22,32 @@ class UsersController extends AppController{
         $this->render('users.index', compact('profil', 'src', 'myLibrary'));
     }
 
+    public function request()
+    {
+        if(!$_SESSION){
+          $this->notFound();
+        }
+        $musicsList = $this->User->requestWait();
+        $this->render('users.request', compact('musicsList'));
+    }
+
+    public function deal()
+    {
+      if (isset($_POST['id'])){
+        if(!$_SESSION){
+          $this->notFound();
+        }
+        $id = $_POST['id'];
+        if($this->User->exchangeValid($id)){
+          $musicsList = $this->User->requestWait();
+          $this->render('users.request', compact('musicsList'));
+        }else{
+          $musicsList = $this->User->requestWait();
+          $this->render('users.request', compact('musicsList'));
+        }
+      }
+    }
+
     public function category(){
         $categorie = $this->Category->find($_GET['id']);
         if($categorie === false){

@@ -11,6 +11,8 @@ class SearchController extends AppController {
     public function __construct(){
         parent::__construct();
         $this->loadModel('Search');
+        // $this->loadModel('Users');
+        // $this->loadModel('Posts');
     }
 
     public function index(){
@@ -21,5 +23,9 @@ class SearchController extends AppController {
        $search = $this->Search->allMusics();
        $form = new BootstrapForm();
        $this->render('search.index', compact('search', 'isAdmin', 'form'));
+    }
+
+    public function instantSearch(){
+
     }
 }

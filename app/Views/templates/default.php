@@ -17,22 +17,19 @@
 </head>
 
 <body>
+<?php if ($_SESSION['auth'] == 'admin'): ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.php?p=users.index">Project name</a>
-            <?php if ($_SESSION['auth'] == 'admin'): ?>
-                <a class="btn btn-info" href="index.php?p=admin.admins.all">Gestions des utilisateurs</a>
-            <?php endif ?>
-            <a href="index.php?p=users.index" class="btn btn-info">Mon Profil</a>
-                <a class="btn btn-info" href="index.php?p=connects.disconnect">DECONNEXION PUTAIN</a>
+            <a class="btn btn-info" href="index.php?p=admin.admins.all">Gestions des utilisateurs</a>  
         </div>
     </div>
 </nav>
+<?php endif ?>
 <div class="container">
 <header>
     <img src="../img/fond.svg" id="background-header">
-    <img class="logo" src="img/logo.png">
+    <a href="index.php?p=users.index"><img class="logo" src="img/logo.png"></a>
     <h1 class="text-center">Share Your Sounds</h1>
 </header>
 

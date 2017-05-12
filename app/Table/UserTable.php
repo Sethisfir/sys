@@ -25,7 +25,7 @@ class UserTable extends Table{
     public function getMusics(){
         return $this->query("SELECT * 
             FROM musics 
-            WHERE musics.users_id = ?", array($_SESSION["user"]));
+            WHERE musics.users_id = ? ORDER BY id DESC", array($_SESSION["user"]), true);
     }
 
     /**

@@ -29,7 +29,7 @@
 <div class="container">
 <header>
     <img src="../img/fond.svg" id="background-header">
-    <img class="logo" src="img/logo.png">
+    <a href="index.php?p=users.index"><img class="logo" src="img/logo.png"></a>
     <h1 class="text-center">Share Your Sounds</h1>
 </header>
 

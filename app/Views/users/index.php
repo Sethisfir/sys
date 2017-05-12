@@ -1,6 +1,6 @@
 <div id="content-accueil">
   <div id="profil" class="row">
-    <img src='<?= $src ?>' alt='profilePicture' id='img-profil' class='img-circle' />
+    <img src=<?= $src ?> alt='profilePicture' id='img-profil' class='img-circle' />
     <h2><?=$profil->name?></h2>
     <div id="artiste-head" class="col-xs-7">
       <h3><?= $myLibrary->title?>- <?= $myLibrary->author?></h3>

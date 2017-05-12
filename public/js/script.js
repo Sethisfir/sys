@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function getXHR(){
 	var xhr = null; 
  

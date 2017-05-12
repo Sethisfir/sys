@@ -2,6 +2,7 @@
     <form method="POST">
         <?= $form->input("title", "titre"); ?>
         <?= $form->input("author", "artiste"); ?>
+        <?= $form->input("releaseDate", "date de parution", ['type' => 'date']); ?>
         <div>;
             <p>
                 <label>Cassette</label>

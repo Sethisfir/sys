@@ -2,6 +2,7 @@
     <form method="POST">
         <?= $form->input("title", "titre"); ?>
         <?= $form->input("author", "artiste"); ?>
+        <?= $form->input("releaseDate", "date de parution", ['type' => 'date']); ?>
         <div>;
             <p>
                 <label>Cassette</label>
@@ -10,7 +11,7 @@
             <p>
                 <label>Cd</label>
                 <input type='radio' name='type' value='2' />
-            </p>
+            </p>it 
             <p>
                 <label>Vinyl</label>
                 <input type='radio' name='type' value='3' />

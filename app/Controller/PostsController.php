@@ -11,16 +11,14 @@ class PostsController extends AppController{
         parent::__construct();
         $this->loadModel('Post');
         $this->loadModel('Category');
-var_dump($_POST[]);
     }
 
     public function index(){
         $_SESSION['auth'] == "admin" ? $isAdmin = "admin.users.all" : $isAdmin = "users.index";
-        //$pushSongs = addSong($_POST[]);
+       $pushSongs = $this->Post->addSong($_POST["title"], $_POST["author"], $_POST["releaseDate"], $_POST["user"], $_POST["type"], $_POST["process"]);
         $posts = $this->Post->allMySong($_SESSION["user"]);
         $form = new BootstrapForm();
-        $this->render('posts.index', compact('posts', 'form', 'isAdmin', 'pushSongs'));
-        var_dump($pushSongs);
+        $this->render('posts.index', compact('form', 'isAdmin'));
     }
 
     public function category(){

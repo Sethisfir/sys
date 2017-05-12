@@ -11,8 +11,8 @@ class SearchController extends AppController {
     public function __construct(){
         parent::__construct();
         $this->loadModel('Search');
-        // $this->loadModel('Users');
-        // $this->loadModel('Posts');
+        $this->loadModel('User');
+        $this->loadModel('Post');
     }
 
     public function index(){
@@ -26,6 +26,9 @@ class SearchController extends AppController {
     }
 
     public function instantSearch(){
-
+        $search = $this->Search->search($_GET['value']);
+        foreach ($search as $value) {
+            echo "<p>Alors moi c'est ".$value->name." et j't'".$value->process." ".$value->title." de ".$value->author." sorti le ".$value->releaseDate." en format ".$value->type;
+        }
     }
 }

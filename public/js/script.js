@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function getXHR(){
 	var xhr = null; 
  
@@ -22,14 +21,14 @@ function go(page){
 	var xhr = getXHR();
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == 4 && xhr.status == 200){
-			var reponse = xhr.response;
-			document.getElementById("container").innerHTML = reponse;
+			var reponseok = xhr.response;
+			$("#searchContainer").html(reponseok);
 		}
 	}
-	xhr.open("GET","index.php?p=search.instantSearch",true);
+	xhr.open("GET","index.php?p=search.instantSearch&value="+page,true);
 	xhr.send(null);
 }	
 $("#search").on("input", function(e){
-		go(e)
+		go(e.target.value);
 });
 

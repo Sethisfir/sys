@@ -6,7 +6,8 @@
 	</div> 
 </form>	 
 
-<div id="searchContainer">
+<div id="searchContainer" style="color: #00FF00">
+</div>
 <?php
 	foreach ($search as $search) : ?>
 		<p style='color:white'>Alors moi c'est "<?=$search->name ?>" et j't'"<?= $search->process ?>" "<?= $search->title ?>" de "<?= $search->author ?>" sorti le "<?= $search->releaseDate ?>" en format "<?= $search->type ?>".</p>

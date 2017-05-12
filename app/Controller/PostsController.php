@@ -24,6 +24,11 @@ class PostsController extends AppController{
         $this->render('posts.index', compact('form', 'isAdmin'));
     }
 
+    public function mySong(){
+        $allMySong = $this->Post->allMySong($_SESSION['user']);
+        $this->render('posts.mySong', compact('allMySong'));
+    }
+
     public function category(){
         $categorie = $this->Category->find($_GET['id']);
         if($categorie === false){

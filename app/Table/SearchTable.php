@@ -6,7 +6,7 @@ use Core\Table\Table;
 class SearchTable extends Table{
 
     /**
-    *  Recupère la totalité des musiques de la bdd
+    *  Recupère les 10 dernière des musiques de la bdd
     * @return array
     **/
 
@@ -23,7 +23,12 @@ class SearchTable extends Table{
                             AND process.id = musics.process_id ORDER BY musics.id DESC LIMIT 10");
     }  
 
-    public function search($value){
+    /**
+    *  Récupère les enregistrements dont le titre commence par $value
+    *  @return array
+    **/
+
+    public function search($value, $proc){
         return $this->query("SELECT users.name,
                                     musics.title,
                                     musics.author,
@@ -34,6 +39,7 @@ class SearchTable extends Table{
                             WHERE musics.title LIKE '$value%'
                             AND  musics.users_id = users.id
                             AND categories.id = musics.categories_id
+                            AND process.id = $proc
                             AND process.id = musics.process_id ORDER BY musics.id DESC LIMIT 10");
     }  
 }

@@ -26,7 +26,7 @@ class SearchController extends AppController {
     }
 
     public function instantSearch(){
-        $search = $this->Search->search($_GET['value']);
+        $search = $this->Search->search($_GET['title'], $_GET["proc"]);
         foreach ($search as $value) {
             echo "<p>Alors moi c'est ".$value->name." et j't'".$value->process." ".$value->title." de ".$value->author." sorti le ".$value->releaseDate." en format ".$value->type;
         }

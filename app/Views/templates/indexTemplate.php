@@ -9,7 +9,9 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title><?= App::getInstance()->title; ?></title>
-
+    
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- Bootstrap core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">

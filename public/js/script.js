@@ -1,3 +1,4 @@
+
 function getXHR(){
 	var xhr = null; 
  
@@ -17,7 +18,7 @@ function getXHR(){
 	return xhr;
 }
 
-function go(page){
+function go(title, proc){
 	var xhr = getXHR();
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == 4 && xhr.status == 200){
@@ -25,10 +26,11 @@ function go(page){
 			$("#searchContainer").html(reponseok);
 		}
 	}
-	xhr.open("GET","index.php?p=search.instantSearch&value="+page,true);
+	xhr.open("GET","index.php?p=search.instantSearch&title="+title+"&proc="+proc,true);
 	xhr.send(null);
 }	
 $("#search").on("input", function(e){
-		go(e.target.value);
+		var processus = $("input.process:checked").val();
+		go(e.target.value, processus);
 });
 

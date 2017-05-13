@@ -1,27 +1,22 @@
-
-<style>
-	#lastAdd, #formSearch form{
-		margin: auto;
-		margin-top: 20px;
-	}
-</style>
-
 <div id="searchContainer" style="color: #00FF00">
 	<!-- ICI, LES Resultats de la recherche -->
 </div>
-
-<div id="formSearch">
-	<form method="post" class="form">
+<!--Formulaire recherche-->
+<form method="post" id="formSearch">
+	<div class="form-group">
 		<label>Rechercher</label>
-	 	<input type="text" name="search" id="search" />
+	 	<input type="text" name="search" id="search" class="form-control"/>
+	 </div>
+	 <div class="form-group">
 	 	<label>Echange</label>
 		<input type="radio" name="process" class="process"	value="1"/>
 		<label>Don</label>
 		<input type="radio" name="process" class="process"	value="2"/>
 		<label>Partage</label>
 		<input type="radio" name="process" class="process"	value="3"/>
-	</form>
-</div>
+	</div>
+</form>
+<!--Derniers ajout-->
 <div id="lastAdd" class="form">
 	<h2 class="text-center">Derniers ajouts</h2>
 	<?php

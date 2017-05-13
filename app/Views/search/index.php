@@ -6,7 +6,7 @@
 	 </div>
 	 <div class="form-group">
 	 	<label>Echange</label>
-		<input type="radio" name="process" class="process"	value="1"/>
+		<input type="radio" name="process" class="process"	value="1" checked/>
 		<label>Don</label>
 		<input type="radio" name="process" class="process"	value="2"/>
 		<label>Partage</label>

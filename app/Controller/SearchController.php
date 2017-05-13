@@ -34,6 +34,10 @@ class SearchController extends AppController {
     }
 
     public function details(){
-        $search = $this->Search->search($_GET['']);
+        if(!$_SESSION){
+            $this->notFound();
+        }
+        $search = $this->Search->search($_GET['song']);
+        $this->render('search.details', compact('search'));
     }
 }

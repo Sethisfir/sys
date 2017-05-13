@@ -1,8 +1,9 @@
 
 <div class="page">
-    <form methode="POST" class="formShare">
+    <form method="POST" class="formShare">
         <?= $form->input("title", "Titre"); ?>
         <?= $form->input("author", "Artiste"); ?>
+        <?= $form->input("releaseDate", "Date", ["type" => "date"]); ?>
         <!--Format disponible-->
         <div class="format">
             <!--Faux input pour permettre l'affichage des suivants...-->

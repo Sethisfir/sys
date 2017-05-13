@@ -13,7 +13,7 @@
   <!--Icone de navigation-->
   <div id="content-icone" class="row">
     <div class="liste-icone">
-      <a href="#"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 5.svg" alt="" width="90%"></div></a>
+      <a href="index.php?p=posts.mySong"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 5.svg" alt="" width="90%"></div></a>
       <a href="index.php?p=posts.index"><div class="col-xs-offset-1 col-xs-5 icones"><img src="img/Fichier 3.svg" alt="" width="90%"></div></a>
     </div>
     <div class="liste-icone">

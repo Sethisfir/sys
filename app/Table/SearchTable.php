@@ -28,8 +28,23 @@ class SearchTable extends Table{
     *  @return array
     **/
 
-    public function search($value, $proc){
-        return $this->query("SELECT users.name,
+    public function titleSearch($value, $proc){
+        return $this->query("SELECT 
+                                    musics.id,
+                                    musics.title,
+                                    musics.author,
+                                    categories.type
+                            FROM musics, users, categories, process 
+                            WHERE musics.title LIKE '$value%'
+                            AND  musics.users_id = users.id
+                            AND categories.id = musics.categories_id
+                            AND process.id = $proc
+                            AND process.id = musics.process_id ORDER BY musics.id DESC LIMIT 10");
+    }  
+
+    public function earch($id){
+        return $this->query("SELECT 
+                                    musics.id,
                                     musics.title,
                                     musics.author,
                                     musics.releaseDate,
@@ -39,7 +54,6 @@ class SearchTable extends Table{
                             WHERE musics.title LIKE '$value%'
                             AND  musics.users_id = users.id
                             AND categories.id = musics.categories_id
-                            AND process.id = $proc
                             AND process.id = musics.process_id ORDER BY musics.id DESC LIMIT 10");
     }  
 }

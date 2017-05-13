@@ -7,9 +7,9 @@
         <!--Format disponible-->
         <div class="format">
             <!--Faux input pour permettre l'affichage des suivants...-->
-            <input type='radio' name='type' value='1' id="cassette" />
+            <input type='radio' name='type' value='1' id="cassette"/>
             <label for="cassette" class="iconeCassette iconeFormat"></label>
-            <input type='radio' name='type' value='2' id="cd" />
+            <input type='radio' name='type' value='2' id="cd" checked />
             <label for="cd" class="iconeCd iconeFormat"></label>
             <input type='radio' name='type' value='3' id="vinyle"/>
             <label for="vinyle" class="iconeVinyle iconeFormat"></label>

@@ -39,6 +39,11 @@ class SearchTable extends Table{
                             AND  musics.users_id = users.id
                             AND categories.id = musics.categories_id
                             AND process.id = $proc
+                            AND process.id = musics.process_id
+                            OR musics.author LIKE '$value%'
+                            AND  musics.users_id = users.id
+                            AND categories.id = musics.categories_id
+                            AND process.id = $proc
                             AND process.id = musics.process_id ORDER BY musics.id DESC LIMIT 10");
     }  
 

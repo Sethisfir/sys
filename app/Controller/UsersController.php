@@ -44,6 +44,14 @@ class UsersController extends AppController{
         $this->render('users.request', compact('musicsList'));
     }
 
+    public function share(){
+        if(!$_SESSION){
+          $this->notFound();
+        }
+        $myRequest = $this->User->myRequest();
+        $this->render('users.share', compact('myRequest'));
+    }
+
     public function musics()
     {
         if(!$_SESSION){

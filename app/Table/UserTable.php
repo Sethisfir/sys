@@ -30,6 +30,15 @@ class UserTable extends Table{
                                                            status=?", [$music, $shareUser, $receiveUser, 1]);
     }
 
+    public function myRequest(){
+      return $this->query("SELECT users.name, musics.title, musics.author
+                          FROM users, musics, requests
+                          WHERE requests.musics_id =musics.id
+                          AND requests.shareUser_id = users.id
+                          AND requests.receiveUser_id =?",
+                          [$_SESSION["user"]]);
+    }
+
     /**
      * Récupère les demandes en attentes
      * @return array

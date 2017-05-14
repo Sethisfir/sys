@@ -10,6 +10,7 @@ class PostsController extends AppController{
     public function __construct(){
         parent::__construct();
         $this->loadModel('Post');
+        $this->loadModel('Search');
         $this->loadModel('Category');
     }
 
@@ -25,7 +26,7 @@ class PostsController extends AppController{
     }
 
     public function mySong(){
-        $allMySong = $this->Post->allMySong($_SESSION['user']);
+        $allMySong = $this->Search->allMusics();
         $this->render('posts.mySong', compact('allMySong'));
     }
 }

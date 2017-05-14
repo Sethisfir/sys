@@ -22,7 +22,7 @@
             <label for=" don">Don</label>
             <input type='radio' name='process' value='2' id="don" />
             <label for="partage">Partager</label>
-            <input type='radio' name='process' value='3' id="partage" />
+            <input type='radio' name='process' value='3' id="partage" checked/>
         </div>
         <!--Envoi-->
         <div class="form-group">

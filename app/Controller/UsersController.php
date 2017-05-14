@@ -22,6 +22,18 @@ class UsersController extends AppController{
         $this->render('users.index', compact('profil', 'src', 'myLibrary'));
     }
 
+    public function addRequest(){
+        if(!$_SESSION){
+          $this->notFound();
+        }
+        $musique = htmlspecialchars($_GET['music']);
+        $shareUser = htmlspecialchars($_GET['shareUser']);
+        $receiveUser = htmlspecialchars($_GET['receiveUser']);
+        $res = $this->User->addRequest($musique, $shareUser, $receiveUser);
+
+        $this->render('search.index', compact('res'));
+    }
+
     public function request()
     {
         if(!$_SESSION){

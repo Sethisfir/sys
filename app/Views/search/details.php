@@ -24,5 +24,6 @@
 			<td><strong>Procédé : </strong></td>
 			<td> <?= $search->process ?></td>
 		</tr>
-	</table>		
+	</table>
+	<a href="index.php?p=users.addRequest&music=<?=$search->id ?>&shareUser=<?=$search->users?>&receiveUser=<?=$_SESSION['user']?>" >Faire la demande</a>		
 </div>

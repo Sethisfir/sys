@@ -44,6 +44,7 @@ class SearchTable extends Table{
 
     public function search($id){
         return $this->query("SELECT 
+                                    users.id as users,
                                     users.name,
                                     musics.id,
                                     musics.title,

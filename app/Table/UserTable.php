@@ -19,6 +19,18 @@ class UserTable extends Table{
     }
 
     /**
+    *  Ajoute une demande et la met en attente
+    *  @return boolean
+    **/
+
+    public function addRequest($music, $shareUser, $receiveUser){
+        return $this->db->prepare("INSERT INTO requests SET musics_id=?,
+                                                           shareUser_id=?,
+                                                           receiveUser_id=?,
+                                                           status=?", [$music, $shareUser, $receiveUser, 1]);
+    }
+
+    /**
      * Récupère les demandes en attentes
      * @return array
      */

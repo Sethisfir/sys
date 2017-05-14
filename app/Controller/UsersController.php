@@ -30,6 +30,7 @@ class UsersController extends AppController{
         $shareUser = htmlspecialchars($_GET['shareUser']);
         $receiveUser = htmlspecialchars($_GET['receiveUser']);
         $res = $this->User->addRequest($musique, $shareUser, $receiveUser);
+        echo $res == true ? '<div class="alert alert-success" role="alert">Demande envoyé avec succès</div>' : '<div class="alert alert-error" role="alert">Une erreur est survenue :(</div>';
 
         $this->render('search.index', compact('res'));
     }

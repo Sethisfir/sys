@@ -27,9 +27,11 @@ class SearchController extends AppController {
 
     public function instantSearch(){
         $search = $this->Search->titleSearch($_GET['title'], $_GET["proc"]);
+        echo "<div class='form'>";
         foreach ($search as $key => $value) {
             echo "<p><a href='index.php?p=search.details&song=".$value->id."'>".$value->title." - ".$value->author." - ".$value->type."</a></p>";
         }
+        echo '</div>';
     }
 
     public function details(){

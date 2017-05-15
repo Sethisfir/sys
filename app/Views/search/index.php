@@ -16,6 +16,6 @@
 </form>
 
 <!-- Ici contenu de la recherche -->
-<div id="searchContainer" class="form">
-	<!-- TUNING DANS Controller/SearchController fonction instantSearch -->
+<div id="searchContainer">
+	<!-- TUNING DANS Controller/SearchController fonction instantSearch-->
 </div>	

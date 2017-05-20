@@ -1,9 +1,9 @@
-<h3 style="color:white; font-size: 2em;"><strong>Mes Demandes en cours</strong></h3>
-<?php foreach ($myRequest as $key => $value): ?>
-<div style="color:white;">
-
-  <h3>Demande adressé à <?=$value->name?> </h3>
-  <p>Titre du morceau demandé : <?=$value->title?></p>
-  <p>Auteur : <?=$value->author?></p>
+<div id="demandes">
+	<h2 class="text-center">Mes Demandes en cours</h2>
+	<?php foreach ($myRequest as $key => $value): ?>
+  		<h4>Demande adressé à <?=$value->name?> </h4>
+  		<p><strong>Titre du morceau demandé :</strong> <?=$value->title?></p>
+  		<p><strong>Auteur :</strong> <?=$value->author?></p>
+  		<hr>
+	<?php endforeach; ?>
 </div>
-<?php endforeach; ?>

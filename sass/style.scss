@@ -16,6 +16,12 @@ body{
   width:100%;
 }
 
+h2{
+  color: #0DC7A7;
+  font-weight: 700;
+  margin-bottom: 5%;
+}
+
 /*//////////////////////////////////////HEADER COMMUN/////////////////////////////////*/
 
 header{
@@ -130,9 +136,6 @@ header{
   padding:5%;
   margin-top: -18%;
   background-color:white;
-  h2{
-    color: #0DC7A7;
-  }
   .table > thead > tr > th {
     border-bottom: 4px solid #0DC7A7;
   }
@@ -219,20 +222,34 @@ header{
   background-color:white;
   margin-top: -18%;
   padding:5%;
-  h3{
-    color: #0DC7A7;
+  h4{
+    font-weight: 700;
   }
 }
 
+/*/////////////PAGE PARTAGES EN COURS///////////*/
 
+#demandes{
+  background-color:white;
+  margin-top: -18%;
+  padding:5%;
+  h4{
+    font-weight: 700;
+  }
+  hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(13, 199, 167, 0), rgba(13, 199, 167, 0.75), rgba(13, 199, 167, 0));
+  }
+}
 /*//////////////////////PAGE RECHERCHE/////////////////////////////*/
 
 #formSearch{
-	background: #FFFFFF;
-  	max-width: 320px;
-  	padding: 20px;
-  	text-align: center;
-  	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	background: #0DC7A7;
+  max-width: 320px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 	margin-top:-25%;
 	margin-bottom:5%;
 	input {

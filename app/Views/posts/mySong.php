@@ -1,31 +1,23 @@
-<style>
-	table{
-		color: #FFFFFF;
-		width: 90%;
-		border: 1px solid black;
-		margin: auto;
-	}
-	td{
-		border: 1px solid black;
-		text-align: center;
-		padding: 1px;
-	}
-</style>
-<table style="color:#FFFFFF; width: 90%; border: 1px solid black">
-	<tr>
-		<td><strong>Propriétaire</strong></td>
-		<td><strong>Titre</strong></td>
-		<td><strong>Artiste</strong></td>
-		<td><strong>Support</strong></td>
-		<td><strong>Procédé</strong></td>
-	</tr>
-<?php foreach ($allMySong as $value): ?>
-	<tr>
-		<td><?= $value->name ?></td>
-		<td><?= $value->title ?></td>
-		<td><?= $value->author ?></td>
-		<td><?= $value->type ?></td>
-		<td><?= $value->process ?></td>
-	</tr>
-<?php endforeach; ?> 		
-	
+<div id="listing">
+	<h2 class="text-center">Mes musiques</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th><strong>Titre</strong></th>
+				<th><strong>Artiste</strong></th>
+				<th><strong>Support</strong></th>
+				<th><strong>Procédé</strong></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($allMySong as $value): ?>
+			<tr>
+				<td><?= $value->title ?></td>
+				<td><?= $value->author ?></td>
+				<td><?= $value->type ?></td>
+				<td><?= $value->process ?></td>
+			</tr>
+			<?php endforeach; ?> 
+		</tbody>		
+	</table>
+</div>

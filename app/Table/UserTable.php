@@ -14,8 +14,29 @@ class UserTable extends Table{
     public function findUser($array, $bool){
         return $this->query("SELECT users.id, users.name, users.mail, users.rights, profilpictures.src
             FROM users
-            LEFT JOIN profilpictures ON users.id = profilpictures.users_id
+            LEFT JOIN profilpictures ON users.id = profilpictures.users_id AND profilpictures.selecte = 1
             WHERE users.id = ?", array($array), $bool);
+    }
+
+    /**
+    *  Ajoute une demande et la met en attente
+    *  @return boolean
+    **/
+
+    public function addRequest($music, $shareUser, $receiveUser){
+        return $this->db->prepare("INSERT INTO requests SET musics_id=?,
+                                                           shareUser_id=?,
+                                                           receiveUser_id=?,
+                                                           status=?", [$music, $shareUser, $receiveUser, 1]);
+    }
+
+    public function myRequest(){
+      return $this->query("SELECT users.name, musics.title, musics.author
+                          FROM users, musics, requests
+                          WHERE requests.musics_id =musics.id
+                          AND requests.shareUser_id = users.id
+                          AND requests.receiveUser_id =?",
+                          [$_SESSION["user"]]);
     }
 
     /**

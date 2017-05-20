@@ -19,6 +19,10 @@ class Table
         }
     }
 
+    protected function count(){
+        return $this->query("SELECT COUNT(id) as nbrow FROM $this->table",null,true,null);
+    }
+
     public function all(){
         return $this->query('SELECT * FROM ' . $this->table);
     }
@@ -78,6 +82,48 @@ class Table
                 $one
             );
         }
+    }
+
+    public function pagination($page = 1, $nbDisplay = 6){
+        $nbRows = $this->count();
+        $pagination = round((int)$nbRows->nbrow / $nbDisplay);
+        $start = $page * $nbDisplay - $nbDisplay;
+        $resultats = $this->query(" SELECT articles.title,
+         articles.id,   
+         articles.text,
+         DATE_FORMAT(articles.date, 'Le %d/%m/%Y à %H:%i:%s') as date_article_fr,
+         comments.authors,
+         comments.texte,   
+         DATE_FORMAT(comments.date, 'Le %d/%m/%Y à %H:%i:%s') as date_comment_fr,
+         users.pseudo FROM $this->table 
+         LEFT JOIN users ON articles.users_id = users.id
+         LEFT JOIN comments ON comments.id_article = articles.id 
+         ORDER BY date_article_fr DESC 
+         LIMIT $start, $nbDisplay");
+        $resultats['nbpage']=$pagination;
+        return $resultats;
+    }
+
+    public function uploadFiles($img, $way="/public/img/upload"){
+         if (isset($img)) {
+            $dir = ROOT .$way;
+            $name= $img['name'];
+            $taille_maxi = 100000;
+            $taille = filesize($img['tmp_name']);
+            $extensions = array('.png', '.gif', '.jpg', '.jpeg');
+            $extension = strrchr($img['name'], '.');
+            //Début des vérifications de sécurité...
+                if(in_array($extension, $extensions)) //Si l'extension n'est pas dans le tableau
+                {
+                    if($taille<$taille_maxi){
+                         if (!move_uploaded_file($img['tmp_name'], "$dir/$name")) {
+                            return false;
+                        }else{
+                            return true;
+                        }
+                    }
+                }
+            }
     }
 
 }

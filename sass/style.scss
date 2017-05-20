@@ -126,7 +126,14 @@ header{
 
 /*//////////////////////PAGE LISTING/////////////////////////////*/
 
-
+#listing{                           
+  padding:5%;
+  margin-top: -18%;
+  background-color:white;
+  .table > thead > tr > th {
+    border-bottom: 4px solid #0DC7A7;
+  }
+}
 
 /*//////////////////////PAGE AJOUT/////////////////////////////*/
 
@@ -139,12 +146,12 @@ header{
 .format{
 	display:flex;
 }
-.format input{
+.format input{                                         //Cache les boutons radio
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
 }
-.iconeCassette{
+.iconeCassette{                                       //Icone des formats
 	background-image:url(../img/cass.png);
 }
 .iconeCd{
@@ -153,7 +160,7 @@ header{
 .iconeVinyle{
 	background-image:url(../img/vinyle.png);
 }
-.format input:checked + .iconeFormat{
+.format input:checked + .iconeFormat{                //Affichage de l'icone lorsque l'on clic dessus
 	-webkit-filter: none;
     -moz-filter: none;
     filter: none;
@@ -164,7 +171,7 @@ header{
     -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
     filter: brightness(1.8) grayscale(1) opacity(.7);
 }
-.iconeFormat{
+.iconeFormat{                                      
 	cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
@@ -212,6 +219,7 @@ header{
   	text-align: center;
   	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 	margin-top:-25%;
+	margin-bottom:5%;
 	input {
     font-family: "Roboto", sans-serif;
     background: #f2f2f2;
@@ -224,11 +232,4 @@ header{
 input[type="radio"]{
   	margin-right:10px;
   	margin-top: 10px;
-}
-
-#lastAdd{                     //Derniers ajout
-	margin-top:5%;
-	h2{
-		color:#00C0A5; 
-	}
 }

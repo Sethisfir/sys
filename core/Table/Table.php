@@ -104,13 +104,14 @@ class Table
         return $resultats;
     }
 
-    public function uploadFiles($img, $way="/public/img/upload"){
+    public function uploadFiles($img, $way="/public/img/upload"){ //$img contient un $_FILES[];
          if (isset($img)) {
             $dir = ROOT .$way;
             $name= $img['name'];
             $taille_maxi = 100000;
             $taille = filesize($img['tmp_name']);
-            $extensions = array('.png', '.gif', '.jpg', '.jpeg');
+            //Pour le moment limité au image mais sera bientôt plus général afin de permette l'upload de plus de type.
+            $extensions = array('.png', '.gif', '.jpg', '.jpeg'); 
             $extension = strrchr($img['name'], '.');
             //Début des vérifications de sécurité...
                 if(in_array($extension, $extensions)) //Si l'extension n'est pas dans le tableau

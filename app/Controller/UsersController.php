@@ -29,6 +29,11 @@ class UsersController extends AppController{
         $this->render("users.profil", compact('user', 'rights'));
     }
 
+    public function myProfilePicture(){
+        $pictures = $this->ProfilePicture->user_pictures($_SESSION['user']);
+        $this->render("users.myProfilePictures", compact('pictures'));
+    }
+
     public function changeProfile(){
         if(isset($_POST['pseudo'], $_POST['mail'], $_FILES["profilPicture"])){
             $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),
@@ -40,6 +45,8 @@ class UsersController extends AppController{
             $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),
                                                     "mail" => htmlspecialchars($_POST['mail'])
                                                     ]);
+        }elseif(isset($_GET["picture_id"])){
+            $this->ProfilePicture->addPicture(["selecte" => 1], $_SESSION['user'], $_GET["picture_id"], false);
         }
         $user = $this->User->findUser($_SESSION['user'], true);
         $this->render('users.changeProfile', compact('user'));

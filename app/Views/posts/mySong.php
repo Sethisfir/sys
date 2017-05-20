@@ -1,4 +1,5 @@
 <div id="listing">
+	<h2 class="text-center">Mes musiques</h2>
 	<table class="table">
 		<thead>
 			<tr>

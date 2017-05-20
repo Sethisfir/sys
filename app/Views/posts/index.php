@@ -29,10 +29,10 @@
             <button type="submit" class="btnEnvoi">Envoyer</button>
         </div>
     </form>
-    <!--Bouton de retour-->
+    <!--Bouton de retour
     <div class="row">
         <div class="deco-btn text-center">
             <a href="index.php?p=users.index"><img src="img/deconnexion.svg" class="icone-deconnexion">Retour</a>
         </div>
-    </div>
+    </div>-->
 </div>

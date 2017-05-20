@@ -130,6 +130,9 @@ header{
   padding:5%;
   margin-top: -18%;
   background-color:white;
+  h2{
+    color: #0DC7A7;
+  }
   .table > thead > tr > th {
     border-bottom: 4px solid #0DC7A7;
   }
@@ -209,6 +212,18 @@ header{
   font-size: 14px;
   font-weight: 700;
 }
+
+/*////////////////PAGE REQUETE//////////////////*/
+
+#requete{
+  background-color:white;
+  margin-top: -18%;
+  padding:5%;
+  h3{
+    color: #0DC7A7;
+  }
+}
+
 
 /*//////////////////////PAGE RECHERCHE/////////////////////////////*/
 

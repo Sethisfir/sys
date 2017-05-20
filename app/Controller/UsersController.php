@@ -45,6 +45,8 @@ class UsersController extends AppController{
             $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),
                                                     "mail" => htmlspecialchars($_POST['mail'])
                                                     ]);
+        }elseif(isset($_GET["picture_id"])){
+            $this->ProfilePicture->addPicture(["selecte" => 1], $_SESSION['user'], $_GET["picture_id"], false);
         }
         $user = $this->User->findUser($_SESSION['user'], true);
         $this->render('users.changeProfile', compact('user'));

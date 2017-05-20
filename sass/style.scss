@@ -124,6 +124,10 @@ header{
   	margin-top: 10px;
 }
 
+/*//////////////////////PAGE LISTING/////////////////////////////*/
+
+
+
 /*//////////////////////PAGE AJOUT/////////////////////////////*/
 
 .formShare{
@@ -166,62 +170,6 @@ header{
     background-repeat:no-repeat;
     width:140px;height:80px;
 }
-// .format{
-// 	[type="radio"]:not(:checked) + .iconeCassette,  //Le label devient une image
-// 	[type="radio"]:checked + .iconeCassette {
-// 		content: url(../img/cass.png);  
-//   		position: relative;  
-//   		cursor: pointer; 
-//   		width:30%;
-//   		margin-bottom: 5%;  
-// 	}
-// 	[type="radio"]:not(:checked) + .iconeCd,
-// 	[type="radio"]:checked + .iconeCd {
-// 		content: url(../img/cd.png);
-//   		position: relative;  
-//   		cursor: pointer; 
-//   		width:30%;
-//   		margin-bottom: 5%;   
-// 	}
-// 	[type="radio"]:not(:checked) + .iconeVinyle,
-// 	[type="radio"]:checked + .iconeVinyle {
-// 		content: url(../img/vinyle.png);
-//   		position: relative;  
-//   		cursor: pointer; 
-//   		width:30%;
-//   		margin-bottom: 5%;   
-// 	}
-// 	// [type="radio"]:not(:checked),             //Cache les boutons radio
-// 	// [type="radio"]:checked {
-//  //  		position: absolute;
-//  //  		left: -9999px;
-// 	// }
-// 	[type="radio"]:not(:checked) + label:after {
-//   		opacity: 1; 
-// 	}
-// 	[type="radio"]:checked + label:after {
-// 		opacity: 0.2;
-//     }
-// }
-
-// .radioEchange{
-// 	position:relative;
-// }
-// .radioEchange input[type="radio"] {
-//     visibility: hidden; 
-// 	position: absolute; top: 0; left: 0;
-// }
-// .radioEchange input[type="radio"] + label {
-//      padding: 4px 0 0 24px;
-// }
-// .radioEchange input[type="radio"] + label:before {
-//     content: " ";
-// 	display: inline-block; width: 20px; height: 20px;
-//     background: transparent url(../img/sprite.svg) 0 -30px no-repeat;
-// }
-// .radioEchange input[type="radio"]:checked + label:before {
-// 	background-position: -30px -30px;
-// }
 
 .icone-choix{
 	width:70%;
@@ -237,8 +185,23 @@ header{
   	color: #00C0A5;
   	font-size: 14px;
   	font-weight: 700;
-  	cursor: pointer;
 }	
+
+/*//////////////////////PAGE ECHANGE/////////////////////////////*/
+
+#echange{
+  margin-top: -18%;
+}
+
+.btn-echange{
+  text-transform: uppercase;
+  background: #0DC7A7;
+  margin-top: 25px;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
 
 /*//////////////////////PAGE RECHERCHE/////////////////////////////*/
 

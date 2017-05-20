@@ -1,17 +1,5 @@
-<style>
-	table{
-		color: #FFFFFF;
-		width: 90%;
-		border: 1px solid black;
-		margin: auto;
-	}
-	td{
-		border: 1px solid black;
-		text-align: center;
-		padding: 1px;
-	}
-</style>
-<table style="color:#FFFFFF; width: 90%; border: 1px solid black">
+
+<table>
 	<tr>
 		<td>Propriétaire</td>
 		<td>Titre</td>
@@ -30,4 +18,3 @@
 		<td><?= $value->process ?></td>
 	</tr>
 <?php endforeach; ?> 		
-	

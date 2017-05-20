@@ -47,6 +47,7 @@ class UsersController extends AppController{
                                                     ]);
         }elseif(isset($_GET["picture_id"])){
             $this->ProfilePicture->addPicture(["selecte" => 1], $_SESSION['user'], $_GET["picture_id"], false);
+            header('location: index.php?p=users.index');
         }
         $user = $this->User->findUser($_SESSION['user'], true);
         $this->render('users.changeProfile', compact('user'));

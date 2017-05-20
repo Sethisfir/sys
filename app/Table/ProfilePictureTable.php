@@ -18,4 +18,11 @@ class ProfilePictureTable extends Table{
     	}
     }
 
+    public function user_pictures($users_id){
+    	return $this->query("SELECT profilpictures.src 
+    						FROM profilpictures, users 
+    						WHERE profilpictures.users_id = $users_id
+    						AND users.id = $users_id");
+    }
+
 }

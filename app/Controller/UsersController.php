@@ -29,6 +29,11 @@ class UsersController extends AppController{
         $this->render("users.profil", compact('user', 'rights'));
     }
 
+    public function myProfilePicture(){
+        $pictures = $this->ProfilePicture->user_pictures($_SESSION['user']);
+        $this->render("users.myProfilePictures", compact('pictures'));
+    }
+
     public function changeProfile(){
         if(isset($_POST['pseudo'], $_POST['mail'], $_FILES["profilPicture"])){
             $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),

@@ -14,7 +14,7 @@ class UserTable extends Table{
     public function findUser($array, $bool){
         return $this->query("SELECT users.id, users.name, users.mail, users.rights, profilpictures.src
             FROM users
-            LEFT JOIN profilpictures ON users.id = profilpictures.users_id
+            LEFT JOIN profilpictures ON users.id = profilpictures.users_id AND profilpictures.selecte = 1
             WHERE users.id = ?", array($array), $bool);
     }
 

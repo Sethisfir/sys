@@ -9,6 +9,7 @@ class UsersController extends AppController{
     public function __construct(){
         parent::__construct();
         $this->loadModel('User');
+        $this->loadModel('ProfilePicture');
     }
 
     public function index(){
@@ -20,6 +21,28 @@ class UsersController extends AppController{
         $myLibrary = $this->User->getMusics();
         $profil->src != null ? $src = $profil->src : $src = "/img/Fichier6.svg";
         $this->render('users.index', compact('profil', 'src', 'myLibrary'));
+    }
+
+    public function profil(){
+        $user = $this->User->findUser($_SESSION['user'], true);
+        $user->rights == 2 ? $rights = "Utilisateur" : $rights = "Administrateur";
+        $this->render("users.profil", compact('user', 'rights'));
+    }
+
+    public function changeProfile(){
+        if(isset($_POST['pseudo'], $_POST['mail'], $_FILES["profilPicture"])){
+            $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),
+                                                    "mail" => htmlspecialchars($_POST['mail']),
+                                                    ]);
+            $this->ProfilePicture->addPicture($_FILES['profilPicture'], $_SESSION['user']);
+
+        }elseif(isset($_POST['pseudo'], $_POST['mail'])){
+            $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),
+                                                    "mail" => htmlspecialchars($_POST['mail'])
+                                                    ]);
+        }
+        $user = $this->User->findUser($_SESSION['user'], true);
+        $this->render('users.changeProfile', compact('user'));
     }
 
     public function addRequest(){

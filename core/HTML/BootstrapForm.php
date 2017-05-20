@@ -41,6 +41,13 @@ class BootstrapForm extends Form{
         return $this->surround($label . $input);
     }
 
+    public function files($name, $label, $accept="*"){
+        $label = '<label>' . $label . '</label>';
+        $input = '<input type="file" name="'. $name .'"class="form-control" accept="'. $accept .'"/>';
+        return $this->surround($label . $input);
+
+    }
+
     /**
      * @return string
      */

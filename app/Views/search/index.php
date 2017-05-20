@@ -16,6 +16,6 @@
 </form>
 
 <!-- Ici contenu de la recherche -->
-<div id="searchContainer">
+<div id="searchContainer" class="col-md-offset-8 col-md-4">
 	<!-- TUNING DANS Controller/SearchController fonction instantSearch-->
 </div>	

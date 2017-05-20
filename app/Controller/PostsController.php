@@ -26,7 +26,7 @@ class PostsController extends AppController{
     }
 
     public function mySong(){
-        $allMySong = $this->Search->allMusics();
+        $allMySong = $this->Post->allMySong($_SESSION["user"]);
         $this->render('posts.mySong', compact('allMySong'));
     }
 }

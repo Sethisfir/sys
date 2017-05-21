@@ -35,16 +35,17 @@ class UsersController extends AppController{
     }
 
     public function changeProfile(){
-        if(isset($_POST['pseudo'], $_POST['mail'], $_FILES["profilPicture"])){
+        if(isset($_POST['pseudo'], $_POST['mail'], $_FILES["profilPicture"]) AND $_FILES["profilPicture"]["error"] != 4){
             $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),
                                                     "mail" => htmlspecialchars($_POST['mail']),
                                                     ]);
             $this->ProfilePicture->addPicture($_FILES['profilPicture'], $_SESSION['user']);
-
+            header('location: index.php?p=users.index');
         }elseif(isset($_POST['pseudo'], $_POST['mail'])){
             $this->User->update($_SESSION['user'], ["name" => htmlspecialchars($_POST["pseudo"]),
                                                     "mail" => htmlspecialchars($_POST['mail'])
                                                     ]);
+            header('location: index.php?p=users.index');
         }elseif(isset($_GET["picture_id"])){
             $this->ProfilePicture->addPicture(["selecte" => 1], $_SESSION['user'], $_GET["picture_id"], false);
             header('location: index.php?p=users.index');

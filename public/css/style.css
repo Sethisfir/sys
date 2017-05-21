@@ -120,7 +120,7 @@ header {
   background-color: #0DC7A7;
   margin-top: -15%; }
 
-#img-profil {
+.img-profil {
   width: 100px;
   height: 100px;
   position: relative;
